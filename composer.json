@@ -1,5 +1,8 @@
 {
     "name": "eisenstern/php-project-lvl1",
+    "bin": [
+      "bin/brain-games"
+    ]
     "description": "brain games",
     "authors": [
         {
