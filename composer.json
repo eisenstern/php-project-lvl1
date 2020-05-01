@@ -1,7 +1,8 @@
 {
     "name": "eisenstern/php-project-lvl1",
     "bin": [
-      "bin/brain-games"
+      "bin/brain-games",
+      "bin/brain-even"
     ],
     "description": "brain games",
     "authors": [
@@ -14,7 +15,9 @@
 	"phpcs": "phpcs"
 	},
 	"autoload": {
-		"files": ["src/Cli.php"]
+		"files": [
+			"src/Cli.php",
+			"src/brain-even.php"]
 	},
     "require": {
         "wp-cli/php-cli-tools": "^0.11.11"
