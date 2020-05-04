@@ -26,5 +26,4 @@ function gameStart($task, $gameParts)
         }
     }
     line("Congratulations, %s!", $name);
-
 }

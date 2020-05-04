@@ -7,15 +7,15 @@ use function BrainGames\Engine\gameStart;
 function calcCorrectAnswer($operator, $number1, $number2)
 {
     switch ($operator) {
-    case '+':
-        $correctAnswer = $number1 + $number2;
-        break;
-    case '-':
-        $correctAnswer = $number1 - $number2;
-        break;
-    case '*':
-        $correctAnswer = $number1 * $number2;
-        break;
+        case '+':
+            $correctAnswer = $number1 + $number2;
+            break;
+        case '-':
+            $correctAnswer = $number1 - $number2;
+            break;
+        case '*':
+            $correctAnswer = $number1 * $number2;
+            break;
     }
     return $correctAnswer;
 }
@@ -37,5 +37,3 @@ function gameCalcStart()
     
     gameStart($task, $gameParts);
 }
-
-

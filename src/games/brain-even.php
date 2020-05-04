@@ -22,4 +22,3 @@ function gameEvenStart()
 
     gameStart($task, $gameParts);
 }
-
