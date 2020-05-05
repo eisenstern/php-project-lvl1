@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\BrainCalc;
 
-use function BrainGames\Engine\gameStart;
+use function BrainGames\Engine\startGame;
 
 function calcCorrectAnswer($operator, $number1, $number2)
 {
@@ -20,12 +20,12 @@ function calcCorrectAnswer($operator, $number1, $number2)
     return $correctAnswer;
 }
 
-function gameCalcStart()
+function startCalcGame()
 {
     $task = 'What is the result of the expression?';
     
 
-    $gameParts = function () {
+    $getGameParts = function () {
         $operatorsList = ['+', '-', '*'];
         $operator = $operatorsList[array_rand($operatorsList)];
         $number1 = rand(1, 30);
@@ -35,5 +35,5 @@ function gameCalcStart()
         return [$correctAnswer, $currentTask];
     };
     
-    gameStart($task, $gameParts);
+    startGame($task, $getGameParts);
 }
