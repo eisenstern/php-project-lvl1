@@ -10,3 +10,6 @@ Brain-calc:\
 
 Brain-gcd (greatest common divisor):\
 [![Brain-Gcd](https://asciinema.org/a/keNy0MiV9JLo8ckoc7TTIDj18.svg)](https://asciinema.org/a/keNy0MiV9JLo8ckoc7TTIDj18)
+
+Brain-progression:\
+[![Brain-Progression](https://asciinema.org/a/fzV25q5e1LPJYoO9z3DyYTWT0.svg)](https://asciinema.org/a/fzV25q5e1LPJYoO9z3DyYTWT0)
