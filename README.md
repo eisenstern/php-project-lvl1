@@ -13,3 +13,6 @@ Brain-gcd (greatest common divisor):\
 
 Brain-progression:\
 [![Brain-Progression](https://asciinema.org/a/fzV25q5e1LPJYoO9z3DyYTWT0.svg)](https://asciinema.org/a/fzV25q5e1LPJYoO9z3DyYTWT0)
+
+Brain-prime:\
+[![Brain-Prime](https://asciinema.org/a/XisHphXOpM8YJQFvoFlIvVUTk.svg)](https://asciinema.org/a/XisHphXOpM8YJQFvoFlIvVUTk)
