@@ -4,10 +4,10 @@ namespace BrainGames\Games\BrainProgression;
 
 use function BrainGames\Engine\startGame;
 
-function findInitialProgression($firstElement, $difference)
+function findInitialProgression($firstElement, $difference, $progressionLength)
 {
     $initialProgression[] = $firstElement;
-    for ($count = 1, $element = $firstElement; $count <= 10; $count++) {
+    for ($counter = 1, $element = $firstElement; $counter <= $progressionLength; $counter++) {
         $initialProgression[] = $element + $difference;
         $element += $difference;
     }
@@ -17,19 +17,18 @@ function findInitialProgression($firstElement, $difference)
 function startProgressionGame()
 {
     $task = 'What number is missing in the progression?';
-    
-
-    $getGameParts = function () {
+    $getGameData = function () {
         $firstElement = rand(1, 99);
         $difference = rand(1, 20);
-        $keyForChange = rand(0, 9);
-        $initialProgression = findInitialProgression($firstElement, $difference);
-        $missingElementProgression = $initialProgression;
-        $missingElementProgression[$keyForChange] = "..";
-        $currentTask = implode(" ", $missingElementProgression);
+        $progressionLength = 10;
+        $keyForChange = rand(0, $progressionLength - 1);
+        $initialProgression = findInitialProgression($firstElement, $difference, $progressionLength);
+        $progressionWithSkippedElement = $initialProgression;
+        $progressionWithSkippedElement[$keyForChange] = "..";
+        $question = implode(" ", $progressionWithSkippedElement);
         $correctAnswer = $initialProgression[$keyForChange];
-        return [$correctAnswer, $currentTask];
+        return [$correctAnswer, $question];
     };
     
-    startGame($task, $getGameParts);
+    startGame($task, $getGameData);
 }

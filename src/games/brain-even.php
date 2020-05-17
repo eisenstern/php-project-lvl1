@@ -12,13 +12,11 @@ function isEven($number)
 function startEvenGame()
 {
     $task = 'Answer "yes" if the number is even, otherwise answer "no".';
-
-    $getGameParts = function () {
-        $number = rand(1, 99);
-        $currentTask = $number;
-        $correctAnswer = isEven($number) ? 'yes' : 'no';
-        return [$correctAnswer, $currentTask];
+    $getGameData = function () {
+        $question = rand(1, 99);
+        $correctAnswer = isEven($question) ? 'yes' : 'no';
+        return [$correctAnswer, $question];
     };
 
-    startGame($task, $getGameParts);
+    startGame($task, $getGameData);
 }

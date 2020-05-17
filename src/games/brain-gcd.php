@@ -30,15 +30,13 @@ function findCommonDivisor($number1, $number2)
 function startGcdGame()
 {
     $task = 'Find the greatest common divisor of given numbers.';
-    
-
-    $getGameParts = function () {
+    $getGameData = function () {
         $number1 = rand(1, 50);
         $number2 = rand(50, 99);
-        $currentTask = $number1 . " " . $number2;
+        $question = $number1 . " " . $number2;
         $correctAnswer = findCommonDivisor($number1, $number2);
-        return [$correctAnswer, $currentTask];
+        return [$correctAnswer, $question];
     };
     
-    startGame($task, $getGameParts);
+    startGame($task, $getGameData);
 }

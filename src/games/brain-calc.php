@@ -23,17 +23,15 @@ function calcCorrectAnswer($operator, $number1, $number2)
 function startCalcGame()
 {
     $task = 'What is the result of the expression?';
-    
-
-    $getGameParts = function () {
-        $operatorsList = ['+', '-', '*'];
-        $operator = $operatorsList[array_rand($operatorsList)];
+    $getGameData = function () {
+        $operators = ['+', '-', '*'];
+        $operator = $operators[array_rand($operators)];
         $number1 = rand(1, 30);
         $number2 = rand(1, 30);
-        $currentTask = $number1 . $operator . $number2;
+        $question = "{$number1} {$operator} {$number2}";
         $correctAnswer = calcCorrectAnswer($operator, $number1, $number2);
-        return [$correctAnswer, $currentTask];
+        return [$correctAnswer, $question];
     };
     
-    startGame($task, $getGameParts);
+    startGame($task, $getGameData);
 }

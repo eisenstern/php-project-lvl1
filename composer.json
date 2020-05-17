@@ -1,12 +1,12 @@
 {
     "name": "eisenstern/php-project-lvl1",
     "bin": [
-      "bin/brain-games",
-      "bin/brain-even",
-      "bin/brain-calc",
-      "bin/brain-gcd",
-      "bin/brain-progression",
-      "bin/brain-prime"
+        "bin/brain-games",
+        "bin/brain-even",
+        "bin/brain-calc",
+        "bin/brain-gcd",
+        "bin/brain-progression",
+        "bin/brain-prime"
     ],
     "description": "brain games",
     "authors": [
@@ -15,19 +15,19 @@
             "email": "eisen.stern@mail.ru"
         }
     ],
-	"scripts": {
-	"phpcs": "phpcs"
-	},
-	"autoload": {
-		"files": [
-			"src/engine.php",
-			"src/games/brain-even.php",
-			"src/games/brain-calc.php",
-			"src/games/brain-gcd.php",
-			"src/games/brain-progression.php",
-			"src/games/brain-prime.php"
-			]
-	},
+    "scripts": {
+        "phpcs": "phpcs"
+    },
+    "autoload": {
+        "files": [
+            "src/engine.php",
+            "src/games/brain-even.php",
+            "src/games/brain-calc.php",
+            "src/games/brain-gcd.php",
+            "src/games/brain-progression.php",
+            "src/games/brain-prime.php"
+        ]
+    },
     "require": {
         "wp-cli/php-cli-tools": "^0.11.11"
     },

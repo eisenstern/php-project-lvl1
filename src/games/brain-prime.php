@@ -6,29 +6,23 @@ use function BrainGames\Engine\startGame;
 
 function isPrime($number)
 {
-    $divisors = [];
-    for ($counter = 1; $counter <= floor($number / 2); $counter++) {
+    for ($counter = 2; $counter <= floor($number / 2); $counter++) {
         if ($number % $counter === 0) {
-            $divisors[] = $counter;
+            return false;
         }
     }
-    if ($divisors == [1]) {
-        return true;
-    }
-    return false;
+    return true;
 }
 
 function startPrimeGame()
 {
     $task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-    
-
-    $getGameParts = function () {
+    $getGameData = function () {
         $number = rand(1, 99);
-        $currentTask = $number;
+        $question = $number;
         $correctAnswer = isPrime($number) ? 'yes' : 'no';
-        return [$correctAnswer, $currentTask];
+        return [$correctAnswer, $question];
     };
     
-    startGame($task, $getGameParts);
+    startGame($task, $getGameData);
 }

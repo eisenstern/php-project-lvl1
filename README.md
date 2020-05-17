@@ -1,4 +1,4 @@
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/fa8aaae653e7408c7d1a/maintainability)](https://codeclimate.com/github/eisenstern/php-project-lvl1/maintainability)
 ![My-Actions](https://github.com/eisenstern/php-project-lvl1/workflows/My-Actions/badge.svg)
 
 **Examples of games**\
