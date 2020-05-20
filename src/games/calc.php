@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainGames\Games\BrainCalc;
+namespace BrainGames\Games\Calc;
 
-use function BrainGames\Engine\startGame;
+use function BrainGames\Engine\playGame;
 
 function calcCorrectAnswer($operator, $number1, $number2)
 {
@@ -33,5 +33,5 @@ function startCalcGame()
         return [$correctAnswer, $question];
     };
     
-    startGame($task, $getGameData);
+    playGame($task, $getGameData);
 }

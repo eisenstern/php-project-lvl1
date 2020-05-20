@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainGames\Games\BrainEven;
+namespace BrainGames\Games\Even;
 
-use function BrainGames\Engine\startGame;
+use function BrainGames\Engine\playGame;
 
 function isEven($number)
 {
@@ -18,5 +18,5 @@ function startEvenGame()
         return [$correctAnswer, $question];
     };
 
-    startGame($task, $getGameData);
+    playGame($task, $getGameData);
 }

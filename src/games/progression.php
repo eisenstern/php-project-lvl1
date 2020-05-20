@@ -1,15 +1,13 @@
 <?php
 
-namespace BrainGames\Games\BrainProgression;
+namespace BrainGames\Games\Progression;
 
-use function BrainGames\Engine\startGame;
+use function BrainGames\Engine\playGame;
 
 function findInitialProgression($firstElement, $difference, $progressionLength)
 {
-    $initialProgression[] = $firstElement;
-    for ($counter = 1, $element = $firstElement; $counter <= $progressionLength; $counter++) {
-        $initialProgression[] = $element + $difference;
-        $element += $difference;
+    for ($counter = 0; $counter < $progressionLength; $counter++) {
+        $initialProgression[] = $firstElement + $difference * $counter;
     }
     return $initialProgression;
 }
@@ -26,9 +24,9 @@ function startProgressionGame()
         $progressionWithSkippedElement = $initialProgression;
         $progressionWithSkippedElement[$keyForChange] = "..";
         $question = implode(" ", $progressionWithSkippedElement);
-        $correctAnswer = $initialProgression[$keyForChange];
+        $correctAnswer = $firstElement + $difference * $keyForChange;
         return [$correctAnswer, $question];
     };
     
-    startGame($task, $getGameData);
+    playGame($task, $getGameData);
 }

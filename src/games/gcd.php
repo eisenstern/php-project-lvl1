@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainGames\Games\BrainGcd;
+namespace BrainGames\Games\Gcd;
 
-use function BrainGames\Engine\startGame;
+use function BrainGames\Engine\playGame;
 
 function findAllDivisors($number)
 {
@@ -38,5 +38,5 @@ function startGcdGame()
         return [$correctAnswer, $question];
     };
     
-    startGame($task, $getGameData);
+    playGame($task, $getGameData);
 }

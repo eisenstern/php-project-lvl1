@@ -1,8 +1,8 @@
 <?php
 
-namespace BrainGames\Games\BrainPrime;
+namespace BrainGames\Games\Prime;
 
-use function BrainGames\Engine\startGame;
+use function BrainGames\Engine\playGame;
 
 function isPrime($number)
 {
@@ -18,11 +18,10 @@ function startPrimeGame()
 {
     $task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $getGameData = function () {
-        $number = rand(1, 99);
-        $question = $number;
-        $correctAnswer = isPrime($number) ? 'yes' : 'no';
+        $question = rand(1, 99);
+        $correctAnswer = isPrime($question) ? 'yes' : 'no';
         return [$correctAnswer, $question];
     };
     
-    startGame($task, $getGameData);
+    playGame($task, $getGameData);
 }
