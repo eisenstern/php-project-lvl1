@@ -6,6 +6,9 @@ use function BrainGames\Engine\playGame;
 
 function isPrime($number)
 {
+    if ($number <= 1) {
+        return false;
+    }
     for ($counter = 2; $counter <= floor($number / 2); $counter++) {
         if ($number % $counter === 0) {
             return false;

@@ -16,7 +16,7 @@ function findAllDivisors($number)
     return $divisors;
 }
 
-function findCommonDivisor($number1, $number2)
+function findGreatestCommonDivisor($number1, $number2)
 {
     $allDivisors1 = findAllDivisors($number1);
     $allDivisors2 = findAllDivisors($number2);
@@ -33,8 +33,8 @@ function startGcdGame()
     $getGameData = function () {
         $number1 = rand(1, 50);
         $number2 = rand(50, 99);
-        $question = $number1 . " " . $number2;
-        $correctAnswer = findCommonDivisor($number1, $number2);
+        $question = "{$number1} {$number2}";
+        $correctAnswer = findGreatestCommonDivisor($number1, $number2);
         return [$correctAnswer, $question];
     };
     

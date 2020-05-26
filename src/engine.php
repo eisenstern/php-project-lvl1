@@ -22,8 +22,9 @@ function playGame($task, $getGameData)
             $roundsCounter++;
         } else {
             line("'%s' is wrong answer ;(. Correct answer was '%s'.", $userAnswer, $correctAnswer);
-            return line("Let's try again, %s!", $name);
+            line("Let's try again, %s!", $name);
+            return;
         }
     }
-    return line("Congratulations, %s!", $name);
+    line("Congratulations, %s!", $name);
 }

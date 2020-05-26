@@ -4,7 +4,7 @@ namespace BrainGames\Games\Progression;
 
 use function BrainGames\Engine\playGame;
 
-function findInitialProgression($firstElement, $difference, $progressionLength)
+function makeInitialProgression($firstElement, $difference, $progressionLength)
 {
     for ($counter = 0; $counter < $progressionLength; $counter++) {
         $initialProgression[] = $firstElement + $difference * $counter;
@@ -20,7 +20,7 @@ function startProgressionGame()
         $difference = rand(1, 20);
         $progressionLength = 10;
         $keyForChange = rand(0, $progressionLength - 1);
-        $initialProgression = findInitialProgression($firstElement, $difference, $progressionLength);
+        $initialProgression = makeInitialProgression($firstElement, $difference, $progressionLength);
         $progressionWithSkippedElement = $initialProgression;
         $progressionWithSkippedElement[$keyForChange] = "..";
         $question = implode(" ", $progressionWithSkippedElement);
