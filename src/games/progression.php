@@ -4,12 +4,12 @@ namespace BrainGames\Games\Progression;
 
 use function BrainGames\Engine\playGame;
 
-function makeInitialProgression($firstElement, $difference, $progressionLength)
+function makeProgression($firstElement, $difference, $progressionLength)
 {
     for ($counter = 0; $counter < $progressionLength; $counter++) {
-        $initialProgression[] = $firstElement + $difference * $counter;
+        $progression[] = $firstElement + $difference * $counter;
     }
-    return $initialProgression;
+    return $progression;
 }
 
 function startProgressionGame()
@@ -19,12 +19,12 @@ function startProgressionGame()
         $firstElement = rand(1, 99);
         $difference = rand(1, 20);
         $progressionLength = 10;
-        $keyForChange = rand(0, $progressionLength - 1);
-        $initialProgression = makeInitialProgression($firstElement, $difference, $progressionLength);
-        $progressionWithSkippedElement = $initialProgression;
-        $progressionWithSkippedElement[$keyForChange] = "..";
-        $question = implode(" ", $progressionWithSkippedElement);
-        $correctAnswer = $firstElement + $difference * $keyForChange;
+        $progression = makeProgression($firstElement, $difference, $progressionLength);
+        $keyForChange = array_rand($progression);
+        $progressionCopy = $progression;
+        $progressionCopy[$keyForChange] = "..";
+        $question = implode(" ", $progressionCopy);
+        $correctAnswer = $progression[$keyForChange];
         return [$correctAnswer, $question];
     };
     
